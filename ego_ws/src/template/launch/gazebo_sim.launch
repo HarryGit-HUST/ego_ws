@@ -1,0 +1,12 @@
+<launch>
+    <!-- 启动 Gazebo 真值 Odometry 发布器 -->
+    <node pkg="template" type="gazebo_odom_publisher.py" name="gazebo_odom_publisher" output="screen">
+    </node>
+
+    <!-- 连接主TF树和激光TF树：body -> iris::livox_mid360::link -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="tf_body_to_livox_link"
+          args="0 0 0 0 0 0 1 body iris::livox_mid360::link" />
+
+    <!-- 启动 TF 点云处理节点（假设 tf_cloud.py 不需要参数） -->
+    <node pkg="template" type="tf_cloud.py" name="tf_cloud" output="screen" />
+</launch>

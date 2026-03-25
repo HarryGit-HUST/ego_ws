@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="mission" type="test_ego" name="" output="screen">
+    <rosparam file="$(find mission)/config/test_ego.yaml" command="load"/>
+  </node>
+</launch>

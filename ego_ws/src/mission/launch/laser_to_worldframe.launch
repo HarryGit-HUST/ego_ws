@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="mission" type="laser_to_worldframe" name="" output="screen">
+    <rosparam file="$(find mission)/config/laser_to_worldframe.yaml" command="load"/>
+  </node>
+</launch>

@@ -1,0 +1,6 @@
+# virtual_floor : 1.0
+# virtual_ceiling : 0.6
+ego_err_max : 0.25
+if_debug : 1
+ego_target_x_1 : 6.0
+ego_target_y_1 : 0.0
